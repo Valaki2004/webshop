@@ -1,0 +1,16 @@
+
+    <h2>Belépés</h2>
+  
+    <label for="email">Email</label>
+    <input  [(ngModel)]="email" [ngModelOptions]="{standalone: true}" id="email"  type="email" id="email"  required>
+    <div >
+      <small *ngIf="user" style="color: red;">Érvényes email cím szükséges!</small>
+    </div>
+  
+    <label for="password">Jelszó</label>
+    <input  [(ngModel)]="password" [ngModelOptions]="{standalone: true}" id="password" type="password" id="password"  required>
+    <div>
+      <small *ngIf="user" style="color: red;">A jelszó legalább 5 karakter hosszú kell legyen!</small>
+    </div>
+  
+    <button (click)="login()">Bejelentkezés</button>

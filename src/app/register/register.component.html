@@ -1,0 +1,15 @@
+<h2>Regisztráció</h2>
+<!-- <label for="username">Felhasználónév</label>
+<input [(ngModel)]="displayName" type="text" [ngModelOptions]="{standalone: true}" type="text" id="displayName" required> -->
+
+<label for="email">Email</label>
+<input [(ngModel)]="email" [ngModelOptions]="{standalone: true}" type="email" name="email"  id="email"  required>
+
+<label for="password">Jelszó</label>
+<input [(ngModel)]="password" [ngModelOptions]="{standalone: true}" name="password"  type="password" id="password" required>
+
+<!-- <label for="confirmPassword">Jelszó megerősítése</label>
+<input [(ngModel)]="password" [ngModelOptions]="{standalone: true}" name="confirmPassword" type="confirmpassword" id="confirmPassword" required> -->
+
+<button (click)="register()">Regisztrálok</button>
+<button (click)="registerwithgoogle()">Regisztrálok Googléval</button>

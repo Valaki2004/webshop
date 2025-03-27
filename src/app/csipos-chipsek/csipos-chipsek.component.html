@@ -1,0 +1,16 @@
+<div class="csipos-chipsek-lista">
+    <div *ngFor="let chip of csiposchipsek; let i = index" class="csipos-chipsek-item">
+      <div class="csipos-chipsek-card">
+        <h3>{{ chip.nev }}</h3>
+        <img [src]="chip.image" [alt]="chip.nev" class="csipos-chipsek-kep">
+        <p class="leiras"> {{ chip.leiras }} </p>
+        <p class="ar">Ár: {{ chip.ar }} Ft</p>
+        <!-- <div class="mennyiseg">
+          Mennyiség: <input type="number" [(ngModel)]="chip.darab" min="1">
+        </div>
+        <button class="kosar-gomb" (click)="kosarbaRak(i)">
+          Kosárba rakom
+        </button> -->
+      </div>
+    </div>
+  </div>
