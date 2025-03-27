@@ -1,6 +1,6 @@
 <div *ngIf="card.length > 0; else emptyCart" class="card-container">
     <div *ngFor="let item of card" class="card-item d-flex align-items-center justify-content-between shadow-lg p-3 mb-3 rounded">
-      <img [src]="item.path" alt="{{ item.nev }}" class="card-item-image rounded">
+      <img [src]="item.picture || item.image" alt="{{ item.nev }}" class="card-item-image rounded">
       <div class="card-item-info ms-3">
         <h5>{{ item.nev }}</h5>
         <p><strong>Darab:</strong> {{ item.db }} - <strong>Ár:</strong> {{ item.ar }} Ft</p>

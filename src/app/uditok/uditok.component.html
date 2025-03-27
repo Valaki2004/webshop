@@ -5,12 +5,11 @@
           <img [src]="candy.image" [alt]="candy.nev" class="uditok-kep"> 
           <p class="leiras"> {{ candy.leiras }} </p>
           <p class="ar">Ár: {{ candy.ar }} Ft</p>
-          <!-- <div class="mennyiseg">
-            Mennyiség: <input type="number" #inputQuantity min="1" value="1">
+          <div class="input-group">
+            <input [(ngModel)]="candy.db" type="number" class="form-control text-center" min="1" [max]="candy.maxDb">
           </div>
-          <button class="kosar-gomb" (click)="kosarbaRak(candy, inputQuantity.value)">
-            Kosárba rakom
-          </button> -->
+          <button (click)="addStuff(candy, candy.db)" class="btn btn-outline-success mt-2">Megveszem</button>
+  
         </div>
       </div>
   </div>

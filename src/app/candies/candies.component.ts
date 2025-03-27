@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { BaseService } from '../base.service';
 import { CardService } from '../card.service';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-candies',
@@ -9,11 +10,15 @@ import { CardService } from '../card.service';
 })
 export class CandiesComponent {
   candies:any
-
-  constructor(private base:BaseService,private cart:CardService){}
+  user: any = null;
+  
+  constructor(private base:BaseService,private cart:CardService,private auth:AuthService){}
 
   ngOnInit():void{
     this.getCandies()
+    this.auth.getCurrentUser().subscribe(user => {
+      this.user = user;
+    });
   }
 
   getCandies(){
