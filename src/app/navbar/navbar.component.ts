@@ -10,6 +10,7 @@ import { CardService } from '../card.service';
 })
 export class NavbarComponent {
   user: any = null;
+  admin: any = null;
   cartCount: number = 0;
 
   constructor(private auth:AuthService,private router:Router, private cart:CardService){
@@ -19,6 +20,10 @@ export class NavbarComponent {
     this.auth.getCurrentUser().subscribe(user => {
       this.user = user;
     });
+    this.auth.getIsAdmin().subscribe(admin => {
+      this.admin = admin;
+    });
+
     this.cart.getCart().subscribe((cart: any) => {
       this.cartCount = cart.length;
     });

@@ -1,0 +1,5 @@
+node_modules/
+*.local
+candyshop-67a32-firebase-adminsdk-fbsvc-fed0cec091.json
+firebase-debug.log
+database-debug.log

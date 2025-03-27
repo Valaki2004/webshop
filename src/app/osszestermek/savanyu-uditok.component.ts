@@ -9,7 +9,7 @@ import { AuthService } from '../auth.service';
   styleUrl: './savanyu-uditok.component.css'
 })
 export class SavanyuUditokComponent {
- savanyuuditok:any
+ savanyuuditok:any[]=[]
  user: any = null;
   constructor(private base:BaseService,private cart:CardService,private auth:AuthService){}
   ngOnInit():void{
@@ -19,10 +19,11 @@ export class SavanyuUditokComponent {
     this.getSavanyuUditok()
   }
 
-  getSavanyuUditok(){
-    this.base.getvalamiUditok().subscribe((res)=>
-      this.savanyuuditok=res
-  )
+  getSavanyuUditok() {
+    this.base.getvalamiUditok().subscribe((res) => {
+      console.log(res);
+      this.savanyuuditok = Object.values(res);
+    });
   }
   addStuff(element: any, db: number): void {
     this.cart.addElement(element, db);

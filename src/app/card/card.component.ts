@@ -16,7 +16,7 @@ export class CardComponent implements OnInit, OnDestroy {
   constructor(private router: Router, private crd: CardService) {}
 
   backbtn() {
-    this.router.navigate(["/shop"]);
+    this.router.navigate(["/osszestermek"]);
   }
 
   continuebtn() {

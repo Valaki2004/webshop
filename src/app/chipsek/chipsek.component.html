@@ -18,10 +18,10 @@
         <img [src]="chip.image" [alt]="chip.nev" class="chips-kep">
         <p class="leiras"> {{ chip.leiras }} </p>
         <p class="ar">Ár: {{ chip.ar }} Ft</p>
-        <div class="input-group">
+        <div class="input-group" *ngIf="user">
           <input [(ngModel)]="chip.db" type="number" class="form-control text-center" min="1" [max]="chip.maxDb">
         </div>
-        <button (click)="addStuff(chip, chip.db)" class="btn btn-outline-success mt-2">Megveszem</button>
+        <button *ngIf="user" (click)="addStuff(chip, chip.db)" class="btn btn-outline-success mt-2">Megveszem</button>
 
     </div>
   </div>

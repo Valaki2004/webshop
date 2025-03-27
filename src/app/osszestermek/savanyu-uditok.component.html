@@ -9,11 +9,12 @@
           <img [src]="candy.picture" class="savanyu-uditok-kep"> 
           <p class="leiras"> {{ candy.description }} </p>
           <p class="ar">Ár: {{ candy.price }} Ft</p>
-          <div class="input-group">
+          <div class="input-group" *ngIf="user">
             <input [(ngModel)]="candy.db" type="number" class="form-control text-center" min="1" [max]="candy.maxDb">
           </div>
-          <button (click)="addStuff(candy, candy.db)" class="btn btn-outline-success mt-2">Megveszem</button>
+          <button *ngIf="user" (click)="addStuff(candy, candy.db)" class="btn btn-outline-success mt-2">Megveszem</button>
   
         </div>
     </div>
   </div>
+  

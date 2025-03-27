@@ -49,4 +49,16 @@
     background-color: #0056b3;
     color: white; 
   }
+  .red-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .red-button:hover {
+    background-color: darkred;
+  }
   

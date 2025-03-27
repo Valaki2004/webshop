@@ -10,7 +10,7 @@ import { ChipsekComponent } from './chipsek/chipsek.component';
 import { CsiposChipsekComponent } from './csipos-chipsek/csipos-chipsek.component';
 import { EdesUditokComponent } from './edes-uditok/edes-uditok.component';
 import { GumicukrokComponent } from './gumicukrok/gumicukrok.component';
-import { SavanyuUditokComponent } from './savanyu-uditok/savanyu-uditok.component';
+import { SavanyuUditokComponent } from './osszestermek/savanyu-uditok.component';
 import { SosChipsekComponent } from './sos-chipsek/sos-chipsek.component';
 import { UditokComponent } from './uditok/uditok.component';
 import { provideHttpClient } from '@angular/common/http';
@@ -22,6 +22,7 @@ import { LoginComponent } from './login/login.component';
 import { environment } from '../environments/environment';
 import { CardComponent } from './card/card.component';
 import { OrderComponent } from './order/order.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { OrderComponent } from './order/order.component';
     RegisterComponent,
     LoginComponent,
     CardComponent,
-    OrderComponent
+    OrderComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

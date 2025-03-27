@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand" routerLink="/candies" routerLinkActive="active">Cukorka bolt</a>
+      <a class="navbar-brand" routerLink="/osszestermek" routerLinkActive="active">Cukorka bolt</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -22,9 +22,6 @@
             <a class="nav-link active" aria-current="page" routerLink="/gumicukrok" routerLinkActive="active">Gumicukrok</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="/savanyu-uditok" routerLinkActive="active">Savanyu-Üditök</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link active" aria-current="page" routerLink="/sos-chipsek" routerLinkActive="active">Sós Chipsek</a>
           </li>
           <li class="nav-item">
@@ -35,11 +32,11 @@
           <button *ngIf="user" (click)="viewCart()" class="cart-button">
             Kosár {{ cartCount }}
           </button>
-            <a class="nav-link active" aria-current="page" routerLink="/register" routerLinkActive="active">Regisztrálás</a>
-          
-            <a class="nav-link active" aria-current="page" routerLink="/login" routerLinkActive="active">Bejelentkezés</a>
+            <button *ngIf="admin" class="nav-link active" aria-current="page" routerLink="/admin" routerLinkActive="active">Admin</button>
+            <button  class="nav-link active" aria-current="page" routerLink="/register" routerLinkActive="active">Regisztrálás</button>
+            <button  class="nav-link active" aria-current="page" routerLink="/login" routerLinkActive="active">Bejelentkezés</button>
         </div>
-        <button *ngIf="user" (click)="Logout()">Kijelentkezés</button>
+        <button *ngIf="user" class="red-button" (click)="Logout()">Kijelentkezés</button>
       </div>
     </div>
   </nav>
