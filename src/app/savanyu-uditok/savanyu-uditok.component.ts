@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BaseService } from '../base.service';
 
 @Component({
   selector: 'app-savanyu-uditok',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrl: './savanyu-uditok.component.css'
 })
 export class SavanyuUditokComponent {
+ savanyuuditok:any
+  constructor(private base:BaseService){}
+  ngOnInit():void{
+    this.getSavanyuUditok()
+  }
 
+  getSavanyuUditok(){
+    this.base.getUditok().subscribe((res)=>
+      this.savanyuuditok=res)
+  }
 }

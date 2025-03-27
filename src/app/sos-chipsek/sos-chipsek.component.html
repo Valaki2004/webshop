@@ -1,1 +1,17 @@
-<p>sos-chipsek works!</p>
+<div class="sos-chipsek-lista">
+    <div *ngFor="let candy of soschipsek; let i = index" class="sos-chipsek-item">
+        <div class="sos-chipsek-card">
+          <h3>{{ candy.nev }}</h3>
+          <img [src]="candy.image" [alt]="candy.nev" class="sos-chipsek-kep"> 
+           <p class="leiras"> {{ candy.leiras }} </p>
+          <p class="ar">Ár: {{ candy.ar }} Ft</p>
+          <!-- <div class="mennyiseg">
+            Mennyiség: <input type="number" #inputQuantity min="1" value="1">
+          </div>
+          <button class="kosar-gomb" (click)="kosarbaRak(candy, inputQuantity.value)">
+            Kosárba rakom
+          </button> -->
+        </div>
+      </div>
+  </div>
+  
