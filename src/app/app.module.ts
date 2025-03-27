@@ -20,6 +20,8 @@ import { CommonModule } from '@angular/common';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { environment } from '../environments/environment';
+import { CardComponent } from './card/card.component';
+import { OrderComponent } from './order/order.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { environment } from '../environments/environment';
     UditokComponent,
     NavbarComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    CardComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,

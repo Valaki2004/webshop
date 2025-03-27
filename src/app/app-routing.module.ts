@@ -11,6 +11,8 @@ import { UditokComponent } from './uditok/uditok.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
+import { CardComponent } from './card/card.component';
+import { OrderComponent } from './order/order.component';
 
 const routes: Routes = [
   { path:'candies',component:CandiesComponent},
@@ -23,7 +25,11 @@ const routes: Routes = [
   { path:'uditok', component:UditokComponent},
   { path:'register', component:RegisterComponent},
   { path:'login', component:LoginComponent},
-  { path:'navbar', component:NavbarComponent}
+  { path:'navbar', component:NavbarComponent},
+  { path: 'card', component: CardComponent },
+  { path: 'order', component: OrderComponent},
+
+
 ];
 
 @NgModule({
