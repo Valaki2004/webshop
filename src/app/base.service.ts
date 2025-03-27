@@ -32,7 +32,8 @@ getSosChipsek(){
 }
 getUditok(){
   return this.http.get(`${this.uditokURL}/.json`)
-}getvalamiUditok(){
+}
+getvalamiUditok(){
   return this.http.get(`${this.valamiUditokURL}/.json`)
 }
 

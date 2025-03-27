@@ -14,7 +14,8 @@ export class SavanyuUditokComponent {
   }
 
   getSavanyuUditok(){
-    this.base.getUditok().subscribe((res)=>
-      this.savanyuuditok=res)
+    this.base.getvalamiUditok().subscribe((res)=>
+      this.savanyuuditok=res
+  )
   }
 }

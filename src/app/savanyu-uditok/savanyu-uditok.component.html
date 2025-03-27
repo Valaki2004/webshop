@@ -1,10 +1,14 @@
+
+<!-- {{savanyuuditok|json}} -->
+
+
 <div class="savanyu-uditok-lista">
-    <div *ngFor="let candy of savanyuuditok; let i = index" class="savanyu-uditok-item">
+    <div *ngFor="let candy of savanyuuditok"class="savanyu-uditok-item">
         <div class="savanyu-uditok-card">
           <h3>{{ candy.nev }}</h3>
-          <img [src]="candy.image" [alt]="candy.nev" class="savanyu-uditok-kep"> 
-          <p class="leiras"> {{ candy.leiras }} </p>
-          <p class="ar">Ár: {{ candy.ar }} Ft</p>
+          <img [src]="candy.picture" class="savanyu-uditok-kep"> 
+          <p class="leiras"> {{ candy.description }} </p>
+          <p class="ar">Ár: {{ candy.price }} Ft</p>
           <!-- <div class="mennyiseg">
             Mennyiség: <input type="number" #inputQuantity min="1" value="1">
           </div>
